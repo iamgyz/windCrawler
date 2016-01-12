@@ -1,11 +1,19 @@
-#!/usr/bin/env python3 
+#!/usr/bin/env python3
+'''
+    Author: GYZHENG
+    Email: guanggyz@gmail.com
+    Purpose: Retrieve the Wind speed/direction from Taiwan CWB
+    Ref Url: http://e-service.cwb.gov.tw/HistoryDataQuery/DayDataController.do?command=viewMain&station=467570&datepicker=2016-01-11
+    Usgae: ./windCrawler.py --date 2016-01-11 --station 467570
+'''
 from html.parser import HTMLParser
-import http.cookiejar, urllib.request,urllib.parse
+import urllib.request,urllib.parse
 import re
 import sys
 import json
 import argparse
 '''
+備註:
 0   => 觀測時間
 1   => 測站氣壓
 2   => 海平面氣壓
@@ -87,6 +95,7 @@ class WindCrawler:
         return self.result
 
 if __name__ == '__main__':
+    #Set up argument list
     ap = argparse.ArgumentParser(description='Retrieve daily wind speed and direction data from Taiwan CWB.')
     ap.add_argument('--station', help='Enter the station ID of the Location',nargs=1)
     ap.add_argument('--date', help='Example: 2015-12-01',nargs=1)
@@ -109,6 +118,9 @@ if __name__ == '__main__':
     wc = WindCrawler(station,date)
     wc.start()
     result = wc.get_result()
+    if len(result) == 0:
+        print("ERROR: No data!")
+        sys.exit(-1)
     fileName = station+"_"+date+".json"
     with open(fileName, "w") as outfile:
         json.dump({'station':station,'date':date,'data':result}, outfile, indent=4)
