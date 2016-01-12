@@ -2,6 +2,7 @@
 '''
     Author: GYZHENG
     Email: guanggyz@gmail.com
+    Env: Python3.4^
     Purpose: Retrieve the Wind speed/direction from Taiwan CWB
     Ref Url: http://e-service.cwb.gov.tw/HistoryDataQuery/DayDataController.do?command=viewMain&station=467570&datepicker=2016-01-11
     Usgae: ./windCrawler.py --date 2016-01-11 --station 467570
@@ -66,13 +67,11 @@ class WindHTMLParser(HTMLParser):
     def get_result_list(self):
         result = []
         for i in range(len(self.windSpeed)):
-            #result.append({'t':i+1,'ws':self.windSpeed[i],'wd':self.windDirection[i]})
             result.append({'time':i+1,'wind':{'speed':self.windSpeed[i],'direction':self.windDirection[i]}})
         return result
 
 class WindCrawler:
     def __init__(self,station,date):
-        #default settings
         self.url_host = 'http://e-service.cwb.gov.tw'
         self.url_path = '/HistoryDataQuery/DayDataController.do?command=viewMain&station='+station+"&datepicker="+date
         self.result= []
@@ -82,7 +81,6 @@ class WindCrawler:
             request = urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (X11; U; Linux i686) Gecko/20071127 Firefox/2.0.0.11"})
             response = urllib.request.urlopen(request)
             content = response.read().decode('utf-8','ignore')
-            #print(content)
             parser = WindHTMLParser()
             parser.init()
             parser.feed(content)
@@ -112,7 +110,7 @@ if __name__ == '__main__':
     if args.station != None:
         station = ''.join(args.station)
     else:
-        print("No station parameter detected, use 467570(HsinChu) as default")
+        print("Warning: No station parameter detected, use 467570(HsinChu) as default")
 
     print('Station: '+station+'\r\nDate: '+date)
     wc = WindCrawler(station,date)
