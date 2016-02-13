@@ -1,0 +1,174 @@
+{
+    "data": [
+        {
+            "wind": {
+                "speed": "2.5",
+                "direction": "60"
+            },
+            "time": 1
+        },
+        {
+            "wind": {
+                "speed": "2.2",
+                "direction": "40"
+            },
+            "time": 2
+        },
+        {
+            "wind": {
+                "speed": "5.3",
+                "direction": "360"
+            },
+            "time": 3
+        },
+        {
+            "wind": {
+                "speed": "5.7",
+                "direction": "10"
+            },
+            "time": 4
+        },
+        {
+            "wind": {
+                "speed": "3.0",
+                "direction": "50"
+            },
+            "time": 5
+        },
+        {
+            "wind": {
+                "speed": "2.9",
+                "direction": "40"
+            },
+            "time": 6
+        },
+        {
+            "wind": {
+                "speed": "4.4",
+                "direction": "30"
+            },
+            "time": 7
+        },
+        {
+            "wind": {
+                "speed": "4.8",
+                "direction": "10"
+            },
+            "time": 8
+        },
+        {
+            "wind": {
+                "speed": "3.6",
+                "direction": "30"
+            },
+            "time": 9
+        },
+        {
+            "wind": {
+                "speed": "6.3",
+                "direction": "360"
+            },
+            "time": 10
+        },
+        {
+            "wind": {
+                "speed": "6.3",
+                "direction": "360"
+            },
+            "time": 11
+        },
+        {
+            "wind": {
+                "speed": "7.8",
+                "direction": "360"
+            },
+            "time": 12
+        },
+        {
+            "wind": {
+                "speed": "7.8",
+                "direction": "360"
+            },
+            "time": 13
+        },
+        {
+            "wind": {
+                "speed": "8.0",
+                "direction": "360"
+            },
+            "time": 14
+        },
+        {
+            "wind": {
+                "speed": "8.6",
+                "direction": "360"
+            },
+            "time": 15
+        },
+        {
+            "wind": {
+                "speed": "8.4",
+                "direction": "360"
+            },
+            "time": 16
+        },
+        {
+            "wind": {
+                "speed": "7.7",
+                "direction": "360"
+            },
+            "time": 17
+        },
+        {
+            "wind": {
+                "speed": "8.1",
+                "direction": "10"
+            },
+            "time": 18
+        },
+        {
+            "wind": {
+                "speed": "6.5",
+                "direction": "20"
+            },
+            "time": 19
+        },
+        {
+            "wind": {
+                "speed": "7.6",
+                "direction": "10"
+            },
+            "time": 20
+        },
+        {
+            "wind": {
+                "speed": "7.0",
+                "direction": "10"
+            },
+            "time": 21
+        },
+        {
+            "wind": {
+                "speed": "6.7",
+                "direction": "20"
+            },
+            "time": 22
+        },
+        {
+            "wind": {
+                "speed": "8.1",
+                "direction": "20"
+            },
+            "time": 23
+        },
+        {
+            "wind": {
+                "speed": "8.3",
+                "direction": "10"
+            },
+            "time": 24
+        }
+    ],
+    "station": "467780",
+    "date": "2015-12-30"
+}
